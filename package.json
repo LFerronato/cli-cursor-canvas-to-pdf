@@ -1,0 +1,50 @@
+{
+  "name": "cli-cursor-canvas-to-pdf",
+  "version": "0.1.0",
+  "description": "Export Cursor Canvas (.canvas.tsx) files to PDF",
+  "type": "module",
+  "bin": {
+    "canvas-pdf": "./src/cli.ts"
+  },
+  "files": [
+    "src",
+    "index.html",
+    "vite.config.ts",
+    "skill",
+    "install.sh"
+  ],
+  "engines": {
+    "bun": ">=1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LFerronato/cli-cursor-canvas-to-pdf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LFerronato/cli-cursor-canvas-to-pdf/issues"
+  },
+  "homepage": "https://github.com/LFerronato/cli-cursor-canvas-to-pdf#readme",
+  "keywords": [
+    "cursor",
+    "canvas",
+    "pdf",
+    "cli",
+    "bun",
+    "headless-chrome"
+  ],
+  "license": "MIT",
+  "author": "Lucas Ferronato",
+  "dependencies": {
+    "@mantine/charts": "9.5.1",
+    "@mantine/core": "9.5.1",
+    "@thisismydesign/cursor-canvas-web": "0.3.0",
+    "@vitejs/plugin-react": "6.0.5",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "recharts": "3.10.1",
+    "vite": "8.2.1"
+  },
+  "devDependencies": {
+    "@types/bun": "1.3.14"
+  }
+}

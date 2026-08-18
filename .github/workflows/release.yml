@@ -1,0 +1,41 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pack
+        run: |
+          tar \
+            --exclude='.git' \
+            --exclude='node_modules' \
+            --exclude='.chrome-profile' \
+            --exclude='.DS_Store' \
+            -czf canvas-pdf.tar.gz \
+            package.json \
+            bun.lock \
+            index.html \
+            vite.config.ts \
+            install.sh \
+            src \
+            skill \
+            examples \
+            LICENSE \
+            README.md
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            canvas-pdf.tar.gz
+            install.sh
+          generate_release_notes: true
