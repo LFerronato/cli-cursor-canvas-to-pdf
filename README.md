@@ -37,6 +37,20 @@ Canvases usually live at `~/.cursor/projects/<workspace>/canvases/<name>.canvas.
 --chrome <path>
 ```
 
+There's a tiny fixture in `examples/hello.canvas.tsx` if you just want to see it work.
+
+## Cursor skill
+
+```bash
+npx skills add LFerronato/cli-cursor-canvas-to-pdf -g -a cursor -y
+```
+
+`-a cursor` is on purpose. This format does not exist outside Cursor.
+
+Then:
+
+> use canvas-to-pdf and save this canvas to Downloads as PDF
+
 ## How it works
 
 `.canvas.tsx` is React. Chrome can't print that file directly.
